@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BinaryClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="250" Width="400">
+    <Grid Background="#FF2E2E2E">
+        <Ellipse x:Name="h8" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="60,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Uid="h8"/>
+        <Ellipse x:Name="h4" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="110,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="h2" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="160,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="h1" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="210,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m32" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="60,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m16" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="110,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m8" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="160,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m4" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="210,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m2" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="260,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Ellipse x:Name="m1" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="39" Margin="310,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="70,90,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="120,90,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="170,90,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="220,90,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="32" HorizontalAlignment="Left" Margin="70,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="16" HorizontalAlignment="Left" Margin="120,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="170,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="220,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="270,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="320,160,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="Minutes:" HorizontalAlignment="Left" Margin="5,126,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label Content="Hour:" HorizontalAlignment="Left" Margin="5,56,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Label x:Name="godzinaLabel" Content="Godzina: " HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="290" FontWeight="Bold" BorderBrush="White" Foreground="White"/>
+        <Ellipse x:Name="PM" Fill="#FFB6B6B6" HorizontalAlignment="Left" Height="15" Margin="259,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="15"/>
+        <Label Content="PM" HorizontalAlignment="Left" Margin="254,61,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="White" Foreground="White" Height="21" Width="26" FontSize="10"/>
     </Grid>
 </Window>
