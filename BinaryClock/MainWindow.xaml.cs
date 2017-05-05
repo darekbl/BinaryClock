@@ -28,6 +28,11 @@ namespace BinaryClock
             InitializeComponent();
             Clock TIMER = new Clock();
 
+            var trigger = new TimeTrigger(1);
+
+            bool[] binaryHour = TIMER.getBinaryHour();
+            bool[] binaryMinutes = TIMER.getBinaryMinutes();
+
             /*
              * Variables
              */
@@ -60,21 +65,19 @@ namespace BinaryClock
             /*
              * Get the hour and minutes in binary style
              */
-            bool[] binaryHour = TIMER.getBinaryHour();
-            bool[] binaryMinutes = TIMER.getBinaryMinutes();
-            /*
-             * Set the ellipses
-             */
-             
-            setBinaryHour(binaryHour, ellipsesHour);
-            setBinaryHour(binaryMinutes, ellipsesMinutes);
             
-            setPM(TIMER.isPM());
 
-            /*
-             * Set the digital clock
-             */
-            label.Content = "Godzina: " + DateTime.Now.ToShortTimeString();
+            trigger.OnTimeTriggered += () =>
+            {
+                binaryHour = TIMER.getBinaryHour();
+                binaryMinutes = TIMER.getBinaryMinutes();
+
+                setBinaryHour(binaryHour, ellipsesHour);
+                setBinaryHour(binaryMinutes, ellipsesMinutes);
+
+                setPM(TIMER.isPM());
+                label.Content = "Godzina: " + DateTime.Now.ToShortTimeString();
+            };
             
         }
 
@@ -112,7 +115,7 @@ namespace BinaryClock
             }
         }
 
-        private void setPM(Boolean isPM)
+        private void setPM(bool isPM)
         {
             if (isPM == true)
             {

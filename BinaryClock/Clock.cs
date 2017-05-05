@@ -40,17 +40,14 @@ namespace BinaryClock
                             {
                                 binaryHour[i] = true;
                                 hour = hour % h;
-                                Console.WriteLine(i + "<-- Reszta --- Tablica: --> " + binaryHour[i]);
                             }
                             else
                                 {
                                     binaryHour[i] = false;
-                                    Console.WriteLine("ELSE HOUR -- iteracja -->" + i);
                                 }
 
                         i++;
                         h = h/2;
-                        Console.WriteLine($"h{i} = {h}", h, i);
                     }
 
             return binaryHour;
@@ -68,17 +65,14 @@ namespace BinaryClock
 
             while (i <= 5)
             {
-                Console.WriteLine("min/m = " + minutes / m);
                 if (minutes / m >= 1)
                 {
                     binaryMinutes[i] = true;
                     minutes = minutes % m;
-                    Console.WriteLine(i + "<-- Reszta --- Tablica: --> "+  binaryMinutes[i]);
                 }
                 else
                 {
                     binaryMinutes[i] = false;
-                    Console.WriteLine("ELSE MINUTES -- iteracja -->" + i);
                 }
 
                 i++;
@@ -90,7 +84,7 @@ namespace BinaryClock
 
         public bool isPM()
         {
-            if (DateTime.Now.Hour % 12 > 0)
+            if (DateTime.Now.Hour/12 > 0)
                 return true;
             else
                 return false;
